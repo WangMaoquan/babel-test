@@ -1,0 +1,31 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        // 指定兼容的浏览器版本
+        "targets": {
+          "ie": "11"
+        },
+        // 基础库 core-js 的版本，一般指定为最新的大版本
+        "corejs": 3,
+        /*
+          Polyfill 注入策略
+          它决定了添加 Polyfill 策略，默认是 false，即不添加任何的 Polyfill
+          只有两个 entry / usage
+
+          entry配置规定你必须在入口文件手动添加一行这样的代码
+          import 'core-js';
+          执行下面代码
+          npx babel src --out-dir dist
+
+          usage 按需
+          npx babel src --out-dir dist
+        */
+        "useBuiltIns": "usage",
+        // 不将 ES 模块语法转换为其他模块语法
+        "modules": false
+      }
+    ]
+  ]
+}

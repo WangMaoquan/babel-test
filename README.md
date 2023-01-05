@@ -34,4 +34,12 @@ import 'core-js/modules/es6.set.js';
 
 #### 实际使用
 
-本项目
+**安装依赖**
+
+```
+pnpm i @babel/cli @babel/core @babel/preset-env
+```
+
+- `@babel/cli`: 为 babel 官方的脚手架工具
+- `@babel/core`: babel 核心编译库
+- `@babel/preset-env`: babel 的预设工具集，基本为 babel 必装的库
